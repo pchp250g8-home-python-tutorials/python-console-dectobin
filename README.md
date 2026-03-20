@@ -1,5 +1,5 @@
 DecToBin. Python tutorials. Simple Input/Output. Algorithms. Strings. Console Application.
-A console application in the Python programming language. 
+A console application in the Python programming language.
 The program does the following:
   1. Prompts the user to enter an integer.
   2. Checks whether the number is positive. If not, the program displays a message about the invalid number and terminates.
