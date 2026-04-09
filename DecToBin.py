@@ -1,13 +1,19 @@
 # --conding:utf-8--
 import os
 
+MAX_INT = 2 ** 32 - 1
+bIsRightNum = False
+strLine = ""
 os.system("cls")
 print("Input an unsigned integer number:")
-MAX_INT = 2 ** 32 - 1
-nDecNum = int(input())
-strLine = ""
-if (nDecNum < 0 or nDecNum > MAX_INT):
+try:
+    nDecNum = int(input())
+    bIsRightNum = nDecNum > 0 and nDecNum <= MAX_INT
+except Exception:
+    bIsRightNum = False
+if (not bIsRightNum):
     print("Invalid number format")
+    exit(0)
 nTempVal = nDecNum
 while (nTempVal > 0):
     strLine = str(nTempVal % 2) + strLine
