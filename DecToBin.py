@@ -8,7 +8,7 @@ os.system("cls")
 print("Input an unsigned integer number:")
 try:
     nDecNum = int(input())
-    bIsRightNum = nDecNum > 0 and nDecNum <= MAX_INT
+    bIsRightNum = nDecNum >= 0 and nDecNum <= MAX_INT
 except Exception:
     bIsRightNum = False
 if (not bIsRightNum):
@@ -16,7 +16,9 @@ if (not bIsRightNum):
     exit(0)
 nTempVal = nDecNum
 while (nTempVal > 0):
-    strLine = str(nTempVal % 2) + strLine
+    nBinDigit = nTempVal % 2
+    chBinDigit = chr(nBinDigit + ord("0"))
+    strLine = chBinDigit + strLine
     nTempVal //= 2
 if (len(strLine) == 0):
     strLine = "0"
